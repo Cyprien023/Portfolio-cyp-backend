@@ -1,15 +1,23 @@
 const express = require('express');
 const router = express.Router();
-const pool = require('../db');
 
-router.get('/', async (req, res) => {
-    try {
-        const result = await pool.query('SELECT * FROM projects');
-        res.json(result.rows);
-    } catch (error) {
-        console.error('Error fetching projects', error);
-        res.status(500).send('Server error');
+const projects = [
+    {
+        id: 1,
+        name: 'Portfolio ⚛️',
+        description: 'Portefolio développé avec React, Typesscript, node.',
+        github: 'https://github.com/Cyprien023/Portfolio-cyp',
+    },
+    {
+        id: 2,
+        name: 'Application météo CLI 🦀',
+        description: 'Application météo CLI en Rust',
+        github: 'https://github.com/Cyprien023/Client-meteo-CLI',
     }
+];
+
+router.get('/', (req, res) => {
+    res.json(projects);
 });
 
 module.exports = router;

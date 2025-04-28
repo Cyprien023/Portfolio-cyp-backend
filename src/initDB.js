@@ -18,7 +18,7 @@ const insertProjectsQuery = `
   INSERT INTO projects (title, description, github_url) 
   VALUES 
   ('Portfolio', 'Portefolio développé avec React, Typesscript, node.', 'https://github.com/Cyprien023/Portfolio-cyp'),
-  ('Application météo', 'Applicatioelk,ezlknrlknzlkvnrvlkrznv', 'https://github.com/Cyprien023/Client-meteo-CLI'),
+  ('Application météo', 'Application météo CLI en Rust', 'https://github.com/Cyprien023/Client-meteo-CLI'),
 `;
 
 async function initializeDatabase() {
