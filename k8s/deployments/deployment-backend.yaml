@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: ton-image-backend:latest
+          image: image-backend:latest
           ports:
             - containerPort: 5000
           envFrom:
